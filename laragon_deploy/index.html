@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PadChest XML - Tests XSLT</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .level-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid;
+        }
+        .level-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .minimum { border-left-color: #28a745; }
+        .pro { border-left-color: #007bff; }
+        .expert { border-left-color: #dc3545; }
+        .level-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .level-description {
+            color: #6c757d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .features li {
+            padding: 5px 0;
+            color: #495057;
+        }
+        .features li:before {
+            content: "✅ ";
+            margin-right: 8px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        .info {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #1565c0;
+        }
+        .info strong {
+            color: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏥 PadChest XML - Tests XSLT</h1>
+        
+        <div class="info">
+            <strong>Serveur Laragon :</strong> C:\laragon\www<br>
+            <strong>URL de test :</strong> http://localhost/padchest/<br>
+            <strong>Données de test :</strong> 5 images avec différents scénarios
+        </div>
+
+        <div class="level-grid">
+            <!-- Niveau Minimum -->
+            <div class="level-card minimum">
+                <div class="level-title">📊 Niveau MINIMUM</div>
+                <div class="level-description">
+                    Transformation XSLT basique avec tableau simple et fonctionnel.
+                </div>
+                <ul class="features">
+                    <li>Tableau simple avec bordures</li>
+                    <li>Statistiques de base</li>
+                    <li>CSS minimal</li>
+                    <li>Compatible tous navigateurs</li>
+                </ul>
+                <a href="minimum.html" class="btn">Tester le niveau MINIMUM</a>
+            </div>
+
+            <!-- Niveau Pro -->
+            <div class="level-card pro">
+                <div class="level-title">🎨 Niveau PRO</div>
+                <div class="level-description">
+                    Design moderne et ergonomique avec CSS avancé et responsive design.
+                </div>
+                <ul class="features">
+                    <li>Design moderne avec gradients</li>
+                    <li>Statistiques améliorées</li>
+                    <li>Responsive design</li>
+                    <li>Mise en forme professionnelle</li>
+                </ul>
+                <a href="pro.html" class="btn">Tester le niveau PRO</a>
+            </div>
+
+            <!-- Niveau Expert -->
+            <div class="level-card expert">
+                <div class="level-title">🚀 Niveau EXPERT</div>
+                <div class="level-description">
+                    Interface interactive avec JavaScript, recherche, filtres et graphiques.
+                </div>
+                <ul class="features">
+                    <li>Recherche en temps réel</li>
+                    <li>Filtres dynamiques</li>
+                    <li>Graphiques interactifs</li>
+                    <li>Pagination automatique</li>
+                    <li>Design glassmorphism</li>
+                </ul>
+                <a href="expert.html" class="btn">Tester le niveau EXPERT</a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #6c757d;">
+            <p><strong>Projet PadChest XML</strong> - HEPL 2024</p>
+            <p>Transformations XSLT avec 3 niveaux d'implémentation</p>
+        </div>
+    </div>
+</body>
+</html>
